@@ -1,5 +1,9 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
+  "exclude": [
+    "../node_modules",
+    "../typings/main"
+],
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
@@ -15,12 +19,17 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2017",
+    "target": "es5",
     "module": "es2020",
+    "noLib": false,
+    "types": ["node"],
     "lib": [
       "es2019",
       "es2018",
-      "dom"
+      "es5",
+      "es6",
+      "dom",
+      "dom.iterable", "scripthost"
     ]
   },
   "angularCompilerOptions": {
