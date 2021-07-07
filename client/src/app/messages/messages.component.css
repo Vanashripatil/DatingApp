@@ -1,0 +1,19 @@
+.img-circle {
+     max-height: 50px;
+}
+
+.mb-2{
+   width: 0;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle
+{
+    background-color: hsl(24, 100%, 40%); 
+    border-color: #bf4600;                  
+}
+
+.btn-danger {
+      color: #fff;
+      background-color: #dc3545;
+      border-color: #dc3545;
+}

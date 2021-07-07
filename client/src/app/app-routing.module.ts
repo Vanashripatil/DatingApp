@@ -1,3 +1,4 @@
+import { MemberDetailedResolver } from './_resolvers/member-detailed.resolver';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListsComponent } from "./lists/lists.component";
@@ -21,7 +22,7 @@ const routes: Routes = [
    canActivate: [AuthGuard],
    children: [
          {path: 'members', component: MemberListComponent, canActivate: [AuthGuard]},
-         {path: 'members/:username', component: MemberDetailComponent},
+         {path: 'members/:username', component: MemberDetailComponent, resolve: {member: MemberDetailedResolver}},
          {path: 'member/edit', component: MemberEditComponent, canDeactivate: [PreventUnsavedChangesGuard]},
          {path: 'lists', component: ListsComponent},
          {path: 'messages', component: MessagesComponent},
